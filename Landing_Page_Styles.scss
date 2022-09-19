@@ -274,7 +274,7 @@ main button {
 
     .left,
     .right {
-        flex-basis: 50%;
+        width: 100%;
     }
 
     .left {
@@ -386,20 +386,16 @@ footer {
 
     .story {
         display: flex;
+        flex-direction: column;
         width: 100%;
-        min-height: 800px;
 
         img {
             max-width: 100%;
             margin-top: 100px;
         }
 
-        .left {
-            display: none;
-        }
-
-        .right {
-            flex-basis: 100%;
+        .left, .right {
+            height: 1200px
         }
     }
 }
