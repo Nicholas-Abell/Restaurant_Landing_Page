@@ -163,7 +163,6 @@ main div.carousel {
   width: 100%;
   height: auto;
   z-index: -1;
-  background-size: cover;
 }
 
 main div.carousel::before {
@@ -177,14 +176,10 @@ main div.carousel::before {
   background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
 }
 
-main div.carousel {
-  position: relative;
-}
-
 main div.carousel .carousel__track {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 750px;
   padding: 0;
 }
 
@@ -205,6 +200,8 @@ main div.carousel .carousel__track .carousel__slide img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 main div.carousel .carousel__nav {
