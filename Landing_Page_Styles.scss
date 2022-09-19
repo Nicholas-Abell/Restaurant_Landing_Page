@@ -148,7 +148,6 @@ main {
         width: 100%;
         height: auto;
         z-index: -1;
-        background-size: cover;
 
         &::before {
             content: "";
@@ -160,16 +159,12 @@ main {
             z-index: 1;
             background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
         }
-    }
 
-    div.carousel {
-
-        position: relative;
 
         .carousel__track {
             position: relative;
             width: 100%;
-            height: 800px;
+            height: 750px;
             padding: 0;
 
             .carousel__slide {
@@ -186,6 +181,7 @@ main {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    object-position: center;
                 }
             }
         }
@@ -456,7 +452,13 @@ footer {
                 }
             }
         }
+
+        .carousel__track {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            padding: 0;
+        }
+
+
     }
-
-
-}
