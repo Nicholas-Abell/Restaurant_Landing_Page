@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Landing_Page_Styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-logo hidden">
+            <div class="logo" id="logo" alt="x"></div>
+            <h1>Restaurant</h1>
+        </div>
+        <div class="top" id="top">
+
+            <button class="order">RESERVE SEATS</button>
+        </div>
+        <div class="nav-container" id="nav-container">
+            <navbar class="navbar">
+                <ul>
+                    <div class="drop-down">
+                        <li><button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
+                        </li>
+                        <div class="drop-down-container">
+                            <div class="drop-down-list" id="menuDrop">
+                                <a href="#">View Full Menu</a>
+                                <a href="#">Beverages</a>
+                                <a href="#">Starters</a>
+                                <a href="#">Wings</a>
+                                <a href="#">Bundles and Party Packs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Buy Gift Card</a></li>
+                    <li><a href="#">Franchise</a></li>
+                </ul>
+            </navbar>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <img src="/Images/Slide-1.jpg" alt="">
+                </li>
+                <li class="carousel__slide">
+                    <img src="/Images/Slide-2.jpg" alt="slide-2">
+                </li>
+                <li class="carousel__slide">
+                    <img src="/Images/Slide-3.jpg" alt="slide-3">
+                </li>
+            </ul>
+            <div class="carousel__nav">
+                <div class="dot current-slide" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+            </div>
+        </div>
+        <div class="menu-container">
+            <h3>Menu</h3>
+            <p>Fresh, never frozen and always delicious. Dive into our full menu.
+                <br>
+                Try not to lick the screen.
+            <p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img auto="format, compress" src="/Images/Appetizer.jpg" alt="">
+                <h3>Appetizers</h3>
+                <p>It's the kind of food that's built to share. But no one's going to force you.</p>
+            </div>
+            <div class="card">
+                <img src="/Images/Steak.jpg" alt="food">
+                <h3>Steak</h3>
+                <p>We’ve got a flavor for every fan. Create your wings, your way.</p>
+            </div>
+            <div class="card">
+                <img src="/Images/Wine-and-Spirits.jpg" alt="food">
+                <h3>Wine & Spirits</h3>
+                <p>Dinner tonight. Leftovers tomorrow.</p>
+            </div>
+            <div class="card">
+                <img src="/Images/Salad.jpg" alt="">
+                <h3>Salads & Soups</h3>
+                <p>Going green is no sacrifice.</p>
+            </div>
+            <div class="card">
+                <img src="/Images/Burgers.jpg" alt="food">
+                <h3>Sandwhiches</h3>
+                <p>Always Fresh. Never Frozen. Sometimes Addictive.</p>
+            </div>
+            <div class="card">
+                <img src="/Images/Dessert.jpg" alt="food">
+                <h3>Dessert</h3>
+                <p>The flavor is there, any way you slice it.</p>
+            </div>
+        </div>
+        <button>View Our Full Menu</button>
+    </main>
+    <section class="story">
+        <div class="left"></div>
+        <div class="right"></div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </div>
+        <h1>Bob's Burgers</h1>
+    </footer>
+
+    <script src="/Landing_Page_Scripts.js"></script>
+</body>
+
+</html>

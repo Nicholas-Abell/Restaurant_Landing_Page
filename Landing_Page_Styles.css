@@ -1,0 +1,461 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif, sans;
+}
+
+body {
+  background-color: #35302A;
+  font-size: 1.3rem;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header .top-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute !important;
+  top: 5px;
+  left: 20px;
+  z-index: 100;
+}
+
+header .logo {
+  width: 90px;
+  height: 90px;
+  background: url(/Images/Logo.png);
+  background-position: center;
+  background-size: cover;
+}
+
+header h1 {
+  font-family: qirckCheese;
+  font-size: 4rem;
+  margin-left: 1rem;
+}
+
+div.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: #35302A;
+}
+
+div.top button.order {
+  padding: 20px;
+  margin-right: 60px;
+  opacity: 0;
+}
+
+div.nav-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  display: block;
+  margin: 12px 10px;
+  z-index: 1000;
+  float: right !important;
+  position: relative;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar ul li a,
+.navbar ul li button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f47321;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px 20px;
+  border: none;
+  background: none;
+}
+
+.navbar li a:hover,
+.navbar button:hover {
+  opacity: 70%;
+  color: white;
+}
+
+.navbar li:not(:last-child),
+.drop-down {
+  border-right: 1px solid black;
+}
+
+.drop-down-container {
+  position: absolute;
+}
+
+.drop-down-container .drop-down-list {
+  position: relative;
+  right: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #585555;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  display: none;
+}
+
+.drop-down-container .drop-down-list a {
+  padding: 1.25rem;
+  text-decoration: none;
+  color: #f47321;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.drop-down-container .drop-down-list a:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.drop-down-container .drop-down-list a:hover {
+  background: gray;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+main {
+  color: white;
+  text-align: center;
+}
+
+main div.carousel {
+  position: relative;
+  background: #eee;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  background-size: cover;
+}
+
+main div.carousel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 243px;
+  z-index: 1;
+  background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
+}
+
+main div.carousel {
+  position: relative;
+}
+
+main div.carousel .carousel__track {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  padding: 0;
+}
+
+main div.carousel .carousel__track .carousel__slide {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+}
+
+main div.carousel .carousel__track .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main div.carousel .carousel__nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 10%;
+  left: 50%;
+}
+
+main div.carousel .carousel__nav .dot {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  margin: 10px;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+  border: black solid 2px;
+}
+
+main div.carousel .carousel__nav .dot:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+main h3 {
+  font-size: 2rem;
+}
+
+main .menu-container {
+  background-color: #35302A;
+}
+
+main .menu-container h3 {
+  margin: 2rem 0;
+}
+
+main .card-container {
+  background-color: #35302A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+}
+
+main .card-container .card {
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  padding: 2rem;
+}
+
+main .card-container .card img {
+  width: 100%;
+  height: 500px;
+}
+
+main button {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background: black;
+  font-weight: 700;
+  color: #f47321;
+  border-color: #585555;
+  padding: 25px 50px;
+  margin: 2rem auto;
+}
+
+main button:hover {
+  background-color: #35302A;
+}
+
+.card h3 {
+  color: #f47321;
+  margin: 10px 0px;
+}
+
+.story {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 800px;
+}
+
+.story img {
+  max-width: 100%;
+  margin-top: 100px;
+}
+
+.story .left,
+.story .right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.story .left {
+  color: white;
+  background-color: gray;
+  background-image: url(/Images/Logo3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.story .right {
+  background-image: url(/Images/Interior.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #35302A;
+  padding: 6rem;
+  color: white;
+}
+
+footer div {
+  margin-right: auto;
+}
+
+footer button {
+  cursor: pointer;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Helper */
+.border-bottom {
+  border-bottom: #35302A solid 2px;
+}
+
+.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.bg-white {
+  background: #585555 !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@font-face {
+  font-family: qirckCheese;
+  src: url(/Fonts/Quark-Cheese.png);
+}
+
+@media only screen and (max-width: 1099px) {
+  header navbar.navbar {
+    display: none;
+  }
+  div.nav-container {
+    padding: 1.5rem;
+  }
+  main .card-container {
+    background-color: #35302A;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: left;
+  }
+  main .card-container .card {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    padding: 2rem;
+  }
+  main .card-container .card img {
+    width: 100%;
+    height: 500px;
+  }
+  .story {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    min-height: 800px;
+  }
+  .story img {
+    max-width: 100%;
+    margin-top: 100px;
+  }
+  .story .left {
+    display: none;
+  }
+  .story .right {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header navbar.navbar {
+    display: none;
+  }
+  div.top button {
+    margin: 5px 20px 5px 0px;
+  }
+  main .card-container {
+    background-color: #35302A;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: left;
+  }
+  main .card-container .card {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding: 2rem;
+  }
+  main .card-container .card img {
+    width: 100%;
+    height: 500px;
+  }
+}
+/*# sourceMappingURL=Landing_Page_Styles.css.map */
