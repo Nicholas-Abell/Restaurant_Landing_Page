@@ -312,12 +312,14 @@ main button:hover {
   background-image: url(Images/Logo3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .story .right {
   background-image: url(Images/Interior.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 footer {
@@ -354,6 +356,10 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: white;
+}
+
+footer ul li a:hover {
+  color: #f47321;
 }
 
 footer img {
@@ -435,8 +441,26 @@ footer img {
   header navbar.navbar {
     display: none;
   }
-  div.top button {
-    margin: 5px 20px 5px 0px;
+  div.nav-container {
+    padding: 0rem;
+  }
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  header .top-logo {
+    top: 10px;
+    left: 20px;
+  }
+  header .logo {
+    width: 40px;
+    height: 40px;
+  }
+  header h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
   }
   main .card-container {
     background-color: #35302A;
