@@ -35,7 +35,7 @@ header .top-logo {
 header .logo {
   width: 90px;
   height: 90px;
-  background: url(/Images/Logo.png);
+  background: url(Images/Logo.png);
   background-position: center;
   background-size: cover;
 }
@@ -309,13 +309,13 @@ main button:hover {
 .story .left {
   color: white;
   background-color: gray;
-  background-image: url(/Images/Logo3.jpg);
+  background-image: url(Images/Logo3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .story .right {
-  background-image: url(/Images/Interior.jpg);
+  background-image: url(Images/Interior.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
