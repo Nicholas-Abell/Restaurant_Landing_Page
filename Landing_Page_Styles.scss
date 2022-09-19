@@ -28,7 +28,7 @@ header {
     .logo {
         width: 90px;
         height: 90px;
-        background: url(/Images/Logo.png);
+        background: url(Images/Logo.png);
         background-position: center;
         background-size: cover;
     }
@@ -284,15 +284,17 @@ main button {
     .left {
         color: white;
         background-color: gray;
-        background-image: url(/Images/Logo3.jpg);
+        background-image: url(Images/Logo3.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 
     .right {
-        background-image: url(/Images/Interior.jpg);
+        background-image: url(Images/Interior.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 }
 
@@ -319,9 +321,12 @@ footer {
             margin-bottom: 1rem;
 
             a {
-
                 text-decoration: none;
                 color: white;
+
+                &:hover {
+                    color: #f47321;
+                }
             }
         }
     }
@@ -404,12 +409,34 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+
     header navbar.navbar {
         display: none;
     }
 
-    div.top button {
-        margin: 5px 20px 5px 0px;
+    div.nav-container {
+        padding: 0rem;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        .top-logo {
+            top: 10px;
+            left: 20px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
     }
 
     main {
