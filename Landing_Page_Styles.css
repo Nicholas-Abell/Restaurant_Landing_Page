@@ -272,7 +272,7 @@ main .card-container .card img {
 }
 
 .steak-img {
-  background-image: url(/Images/Steak.jpg);
+  background-image: url(Images/Steak.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -280,7 +280,7 @@ main .card-container .card img {
 }
 
 .wine-img {
-  background-image: url(/Images/Wine-and-Spirits.jpg);
+  background-image: url(Images/Wine-and-Spirits.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -288,7 +288,7 @@ main .card-container .card img {
 }
 
 .salad-img {
-  background-image: url(/Images/Salad.jpg);
+  background-image: url(Images/Salad.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -296,7 +296,7 @@ main .card-container .card img {
 }
 
 .sandwhich-img {
-  background-image: url(/Images/Burgers.jpg);
+  background-image: url(Images/Burgers.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -304,7 +304,7 @@ main .card-container .card img {
 }
 
 .dessert-img {
-  background-image: url(/Images/Dessert.jpg);
+  background-image: url(Images/Dessert.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
