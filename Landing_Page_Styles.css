@@ -264,7 +264,7 @@ main .card-container .card img {
 }
 
 .appetizer-img {
-  background-image: url(/Images/Appetizer.jpg);
+  background-image: url(Images/Appetizer.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
