@@ -240,7 +240,7 @@ main {
 }
 
 .appetizer-img {
-    background-image: url(/Images/Appetizer.jpg);
+    background-image: url(Images/Appetizer.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -248,7 +248,7 @@ main {
 }
 
 .steak-img {
-    background-image: url(/Images/Steak.jpg);
+    background-image: url(Images/Steak.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -256,7 +256,7 @@ main {
 }
 
 .wine-img {
-    background-image: url(/Images/Wine-and-Spirits.jpg);
+    background-image: url(Images/Wine-and-Spirits.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -264,7 +264,7 @@ main {
 }
 
 .salad-img {
-    background-image: url(/Images/Salad.jpg);
+    background-image: url(Images/Salad.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -272,7 +272,7 @@ main {
 }
 
 .sandwhich-img {
-    background-image: url(/Images/Burgers.jpg);
+    background-image: url(Images/Burgers.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -280,7 +280,7 @@ main {
 }
 
 .dessert-img {
-    background-image: url(/Images/Dessert.jpg);
+    background-image: url(Images/Dessert.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -400,7 +400,7 @@ footer {
 //Fonts
 @font-face {
     font-family: qirckCheese;
-    src: url(/Fonts/Quark-Cheese.png);
+    src: url(Fonts/Quark-Cheese.png);
 }
 
 @media only screen and (max-width: 1099px) {
