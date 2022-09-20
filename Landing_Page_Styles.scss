@@ -1,460 +1,130 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, sans;
-}
-
-body {
-    background-color: #35302A;
-    font-size: 1.3rem;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-
-    .top-logo {
-        display: flex;
-        align-items: flex-end;
-        position: absolute !important;
-        top: 5px;
-        left: 20px;
-        z-index: 100;
-    }
-
-    .logo {
-        width: 90px;
-        height: 90px;
-        background: url(Images/Logo.png);
-        background-position: center;
-        background-size: cover;
-    }
-
-    h1 {
-        font-family: qirckCheese;
-        font-size: 4rem;
-        margin-left: 1rem;
-    }
-}
-
-
-div.top {
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: #35302A;
-}
-
-div.top button.order {
-    padding: 20px;
-    margin-right: 60px;
-    opacity: 0;
-}
-
-div.nav-container {
-    position: absolute;
-    display: block;
-    width: 100%;
-}
-
-.navbar {
-    display: block;
-    margin: 12px 10px;
-    z-index: 1000;
-    float: right !important;
-    position: relative;
-
-    ul {
-        display: flex;
-        list-style-type: none;
-
-        li a,
-        li button {
-            cursor: pointer;
-            text-decoration: none;
-            color: #f47321;
-            font-weight: 700;
-            font-size: 20px;
-            padding: 0px 20px;
-            border: none;
-            background: none
-        }
-    }
-}
-
-.navbar li a:hover,
-.navbar button:hover {
-    opacity: 70%;
-    color: white;
-}
-
-.navbar li:not(:last-child),
-.drop-down {
-    border-right: 1px solid black;
-}
-
-.drop-down-container {
-    position: absolute;
-
-    .drop-down-list {
-        position: relative;
-        right: 25%;
-        flex-direction: column;
-        background: #585555;
-        margin-top: 1rem;
-        border-radius: 1rem;
-        display: none;
-
-        a {
-            padding: 1.25rem;
-            text-decoration: none;
-            color: #f47321;
-            font-weight: 700;
-            font-size: 20px;
-
-            &:not(:last-child) {
-                border-bottom: 1px solid black;
-            }
-
-            &:hover {
-                background: gray;
-            }
-        }
-    }
-}
-
-.caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-top: 4px dashed;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-}
-
-main {
-    color: white;
-    text-align: center;
-
-
-    div.carousel {
-        position: relative;
-        background: #eee;
-        width: 100%;
-        height: auto;
-        z-index: -1;
-
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 243px;
-            z-index: 1;
-            background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
-        }
-
-
-        .carousel__track {
-            position: relative;
-            width: 100%;
-            height: 750px;
-            padding: 0;
-
-            .carousel__slide {
-                width: 100%;
-                height: 100%;
-                background-color: black;
-                overflow: hidden;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                transition: ease-in 1s;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
-        }
-
-        .carousel__nav {
-            position: absolute;
-            display: flex;
-            bottom: 10%;
-            left: 50%;
-
-            .dot {
-                border-radius: 50%;
-                width: 20px;
-                height: 20px;
-                background: white;
-                margin: 10px;
-                transition: ease-in 1s;
-                border: black solid 2px;
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: red;
-                }
-            }
-        }
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    .menu-container {
-        background-color: #35302A;
-
-        h3 {
-            margin: 2rem 0;
-        }
-    }
-
-    .card-container {
-        background-color: #35302A;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: left;
-
-        .card {
-            flex: 33.33%;
-            padding: 2rem;
-
-            img {
-                width: 100%;
-                height: 500px;
-            }
-        }
-    }
-}
-
-main button {
-    font-size: 2rem;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    background: black;
-    font-weight: 700;
-    color: #f47321;
-    border-color: #585555;
-    padding: 25px 50px;
-    margin: 2rem auto;
-
-    &:hover {
-        background-color: #35302A;
-    }
-}
-
-
-.card h3 {
-    color: #f47321;
-    margin: 10px 0px;
-}
-
-
-.story {
-    display: flex;
-    width: 100%;
-    min-height: 800px;
-
-    img {
-        max-width: 100%;
-        margin-top: 100px;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-    }
-
-    .left {
-        color: white;
-        background-color: gray;
-        background-image: url(Images/Logo3.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .right {
-        background-image: url(Images/Interior.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #35302A;
-    padding: 6rem;
-    color: white;
-
-    div {
-        margin-right: auto;
-    }
-
-    button {
-        cursor: pointer;
-    }
-
-    ul {
-        list-style-type: none;
-
-        li {
-            margin-bottom: 1rem;
-
-            a {
-                text-decoration: none;
-                color: white;
-
-                &:hover {
-                    color: #f47321;
-                }
-            }
-        }
-    }
-
-    img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-/* Helper */
-.border-bottom {
-    border-bottom: #35302A solid 2px;
-}
-
-.show {
-    display: flex !important;
-}
-
-.bg-white {
-    background: rgb(88, 85, 85) !important;
-}
-
-.hidden {
-    display: none !important;
-}
-
-//Fonts
-@font-face {
-    font-family: qirckCheese;
-    src: url(/Fonts/Quark-Cheese.png);
-}
-
-@media only screen and (max-width: 1099px) {
-    header navbar.navbar {
-        display: none;
-    }
-
-    div.nav-container {
-        padding: 1.5rem;
-    }
-
-    main {
-        .card-container {
-            background-color: #35302A;
-            display: flex;
-            flex-wrap: wrap;
-            text-align: left;
-
-            .card {
-                flex: 50%;
-                padding: 2rem;
-
-                img {
-                    width: 100%;
-                    height: 500px;
-                }
-            }
-        }
-    }
-
-    .story {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        img {
-            max-width: 100%;
-            margin-top: 100px;
-        }
-
-        .left, .right {
-            height: 1200px
-        }
-    }
-}
-
-@media only screen and (max-width: 800px) {
-
-    header navbar.navbar {
-        display: none;
-    }
-
-    div.nav-container {
-        padding: 0rem;
-    }
-
-    header {
-        position: sticky;
-        top: 0;
-        left: 0;
-
-        .top-logo {
-            top: 10px;
-            left: 20px;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-left: 1rem;
-        }
-    }
-
-    main {
-        .card-container {
-            background-color: #35302A;
-            display: flex;
-            flex-wrap: wrap;
-            text-align: left;
-
-            .card {
-                flex: 100%;
-                padding: 2rem;
-
-                img {
-                    width: 100%;
-                    height: 500px;
-                }
-            }
-        }
-
-        .carousel__track {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            padding: 0;
-        }
-
-
-    }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="Landing_Page_Styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-logo hidden">
+            <div class="logo" id="logo" alt="x"></div>
+            <h1>Restaurant</h1>
+        </div>
+        <div class="top" id="top">
+
+            <button class="order">RESERVE SEATS</button>
+        </div>
+        <div class="nav-container" id="nav-container">
+            <navbar class="navbar">
+                <ul>
+                    <div class="drop-down">
+                        <li><button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
+                        </li>
+                        <div class="drop-down-container">
+                            <div class="drop-down-list" id="menuDrop">
+                                <a href="#">View Full Menu</a>
+                                <a href="#">Beverages</a>
+                                <a href="#">Starters</a>
+                                <a href="#">Wings</a>
+                                <a href="#">Bundles and Party Packs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Buy Gift Card</a></li>
+                    <li><a href="#">Franchise</a></li>
+                </ul>
+            </navbar>
+        </div>
+    </header>
+    <main>
+        <div class="carousel">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <img src="Images/Slide-1.jpg" alt="">
+                </li>
+                <li class="carousel__slide">
+                    <img src="Images/Slide-2.jpg" alt="slide-2">
+                </li>
+                <li class="carousel__slide">
+                    <img src="Images/Slide-3.jpg" alt="slide-3">
+                </li>
+                <li class="carousel__slide current-slide">
+                    <img src="Images/Slide-4.jpg" alt="">
+                </li>
+            </ul>
+            <div class="carousel__nav">
+                <div class="dot current-slide" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+                <div class="dot" id="dot-4"></div>
+            </div>
+        </div>
+        <div class="menu-container">
+            <h3>Menu</h3>
+            <p>Fresh, never frozen and always delicious. Dive into our full menu.
+                <br>
+                Try not to lick the screen.
+            <p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img auto="format, compress" src="/Images/Appetizer.jpg" alt="">
+                <h3>Appetizers</h3>
+                <p>It's the kind of food that's built to share. But no one's going to force you.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Steak.jpg" alt="food">
+                <h3>Steak</h3>
+                <p>We’ve got a flavor for every fan. Create your wings, your way.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Wine-and-Spirits.jpg" alt="food">
+                <h3>Wine & Spirits</h3>
+                <p>Dinner tonight. Leftovers tomorrow.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Salad.jpg" alt="">
+                <h3>Salads & Soups</h3>
+                <p>Going green is no sacrifice.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Burgers.jpg" alt="food">
+                <h3>Sandwhiches</h3>
+                <p>Always Fresh. Never Frozen. Sometimes Addictive.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Dessert.jpg" alt="food">
+                <h3>Dessert</h3>
+                <p>The flavor is there, any way you slice it.</p>
+            </div>
+        </div>
+        <button>View Our Full Menu</button>
+    </main>
+    <section class="story">
+        <div class="left"></div>
+        <div class="right"></div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+        </div>
+        <h1>Bob's Burgers</h1>
+    </footer>
+
+    <script src="/Landing_Page_Scripts.js"></script>
+</body>
+
+</html>
