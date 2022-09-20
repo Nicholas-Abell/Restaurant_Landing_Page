@@ -179,7 +179,7 @@ main div.carousel::before {
 main div.carousel .carousel__track {
   position: relative;
   width: 100%;
-  height: 750px;
+  height: 80vh;
   padding: 0;
 }
 
