@@ -14,10 +14,14 @@
         <div class="top-logo hidden">
             <div class="logo" id="logo" alt="x"></div>
             <h1>Restaurant</h1>
+
         </div>
         <div class="top" id="top">
-
-            <button class="order">RESERVE SEATS</button>
+            <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
         </div>
         <div class="nav-container" id="nav-container">
             <navbar class="navbar">
@@ -30,8 +34,8 @@
                                 <a href="#">View Full Menu</a>
                                 <a href="#">Beverages</a>
                                 <a href="#">Starters</a>
-                                <a href="#">Wings</a>
-                                <a href="#">Bundles and Party Packs</a>
+                                <a href="#">Steak</a>
+                                <a href="#">Wine & Spirits</a>
                             </div>
                         </div>
                     </div>
@@ -41,6 +45,15 @@
                     <li><a href="#">Franchise</a></li>
                 </ul>
             </navbar>
+        </div>
+        <div class="side-nav">
+            <button onclick="CloseSideNav()" id="side-nav-close">X</button>
+            <a href="#">View Full Menu</a>
+            <a href="#">Beverages</a>
+            <a href="#">Starters</a>
+            <a href="#">Steak</a>
+            <a href="#">Wine & Spirits</a>
+            <div class="logo"></div>
         </div>
     </header>
     <main>
@@ -121,7 +134,10 @@
                 <li><a href="#">News</a></li>
             </ul>
         </div>
-        <h1>Bob's Burgers</h1>
+        <div class="top-logo">
+            <div class="logo" id="logo" alt="x"></div>
+            <h1>Restaurant</h1>
+        </div>
     </footer>
 
     <script src="Landing_Page_Scripts.js"></script>
