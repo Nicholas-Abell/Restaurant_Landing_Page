@@ -43,6 +43,8 @@ header .logo {
 }
 
 header h1 {
+  font-weight: 700;
+  -webkit-text-stroke: whitesmoke 0.5px;
   font-family: qirckCheese;
   margin-left: 1rem;
 }
@@ -108,9 +110,11 @@ header .side-nav a:hover {
 }
 
 header .side-nav .logo {
-  background-image: url(Images/Logo3.jpg);
+  background-image: url(Images/Logo2.jpg);
+  width: 50%;
+  background-color: black;
   margin: auto auto;
-  padding: 50%;
+  padding: 40%;
 }
 
 div.top {
@@ -207,7 +211,7 @@ div.nav-container {
 
 .navbar li:not(:last-child),
 .drop-down {
-  border-right: 1px solid black;
+  border-right: 1px solid white;
 }
 
 .drop-down-container {
@@ -299,6 +303,24 @@ main div.carousel .carousel__track .carousel__slide {
   transition: ease-in 1s;
 }
 
+main div.carousel .carousel__track .carousel__slide .carousel__text {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  color: floralwhite;
+  font-weight: 700;
+}
+
+main div.carousel .carousel__track .carousel__slide .carousel__text h1 {
+  -webkit-text-stroke: black 2px;
+  margin-bottom: 1rem;
+}
+
+main div.carousel .carousel__track .carousel__slide .carousel__text p {
+  -webkit-text-stroke: black 0.5px;
+}
+
 main div.carousel .carousel__track .carousel__slide img {
   width: 100%;
   height: 100%;
@@ -322,10 +344,13 @@ main div.carousel .carousel__nav .dot {
   width: 20px;
   height: 20px;
   background: white;
-  margin: 10px;
   -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
   border: black solid 2px;
+}
+
+main div.carousel .carousel__nav .dot:not(:last-child) {
+  margin-right: 10px;
 }
 
 main div.carousel .carousel__nav .dot:hover {
@@ -342,6 +367,8 @@ main .menu-container {
 }
 
 main .menu-container h3 {
+  color: #f47321;
+  font-weight: 700;
   margin: 2rem 0;
 }
 
