@@ -4,26 +4,13 @@ function MenuDrop() {
     menuDrop.classList.toggle("show");
 }
 
-
-window.onclick = function (event) {
-    if (!event.target.matches('.x')) {
-        var dropdowns = document.getElementsByClassName("drop-down-list");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-
 //Scroll events
 window.addEventListener('scroll', (event) => {
     let scrollPos = window.scrollY;
     const navTop = document.getElementById('nav-container');
     const top = document.getElementById('top');
     const logo = document.querySelector('.top-logo');
+    const hamburger = document.getElementById('hamburger');
 
     const add_background_on_scroll = (x) => x.classList.add('bg-white');
     const add_border_on_scroll = (x) => x.classList.add('border-bottom');
@@ -31,21 +18,27 @@ window.addEventListener('scroll', (event) => {
     const remove_border_on_scroll = (x) => x.classList.remove('border-bottom');
     const show_on_scroll = (x) => x.classList.remove('hidden');
     const hide_on_scroll = (x) => x.classList.add('hidden');
+    const shift_Down = (x) => x.classList.add('shift-down');
+    const remove_shift = (x) => x.classList.remove('shift-down');
+
+    const addClass = (x, y) => x.classList.add(y);
+    const removeClass = (x, y) => x.classList.add(y);
 
     if (scrollPos >= 200) {
         add_background_on_scroll(navTop);
         add_border_on_scroll(navTop);
         add_background_on_scroll(top);
         show_on_scroll(logo);
+        shift_Down(hamburger);
     }
     else {
         remove_background_on_scroll(navTop);
         remove_border_on_scroll(navTop);
         remove_background_on_scroll(top);
         hide_on_scroll(logo);
+        remove_shift(hamburger);
     }
 });
-
 
 //Carousel
 const track = document.querySelector('.carousel__track');
@@ -70,14 +63,19 @@ function showSlides() {
     slides[slideIndex - 1].style.opacity = '100';
     dots[slideIndex - 1].style.background = "orange";
     setTimeout(showSlides, 3000);
+}
+
+//Hamburger_Side-Nav
+const sideNav = document.querySelector('.side-nav');
+
+function CloseSideNav() {
+    sideNav.style.display = "none";
+    document.body.style = "overflow: scroll";
 
 }
 
-
-// slides.forEach(setSlidePosition);
-
-//dots
-nav.addEventListener('click', e => {
-    const targetDot = e;
-    console.log(e);
-})
+function OpenSideNav() {
+    sideNav.style.display = "flex";
+    document.body.style = "overflow: hidden";
+    //body background opacity, lock scroll
+}
