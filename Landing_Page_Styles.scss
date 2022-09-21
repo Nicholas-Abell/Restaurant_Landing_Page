@@ -33,12 +33,69 @@ header {
         background: url(Images/Logo.png);
         background-position: center;
         background-size: cover;
+        background-color: rgb(210, 205, 205);
+        border-radius: 50%;
     }
 
     h1 {
         font-family: qirckCheese;
-        font-size: 4rem;
         margin-left: 1rem;
+    }
+
+    .side-nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+        z-index: 9999;
+        transition: 1s ease-out;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid red;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            margin: 1rem;
+            padding: 2rem;
+            font-size: 4rem;
+            border: $primary solid;
+            color: $primary;
+            background: none;
+
+            &:hover {
+                background-color: gray;
+            }
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 0px 20px;
+            border: none;
+            background: none;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+
+        .logo {
+            background-image: url(/Images/Logo3.jpg);
+            margin: auto auto;
+            padding: 50%;
+        }
     }
 }
 
@@ -47,6 +104,33 @@ div.top {
     display: flex;
     flex-direction: row-reverse;
     background-color: #35302A;
+    padding: 2rem;
+
+    button.hamburger {
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 40px;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        display: none;
+        background: none;
+        border: none;
+
+        span {
+            width: 50px;
+            height: 4px;
+            background-color: $primary;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 div.top button.order {
@@ -81,7 +165,7 @@ div.nav-container {
             font-size: 20px;
             padding: 0px 20px;
             border: none;
-            background: none
+            background: none;
         }
     }
 }
@@ -108,6 +192,7 @@ div.nav-container {
         margin-top: 1rem;
         border-radius: 1rem;
         display: none;
+        overflow: hidden;
 
         a {
             padding: 1.25rem;
@@ -303,7 +388,8 @@ main button {
     font-weight: 700;
     color: #f47321;
     border-color: #585555;
-    padding: 25px 50px;
+    width: 30%;
+    padding: 2% 0px;
     margin: 2rem auto;
 
     &:hover {
@@ -351,10 +437,6 @@ footer {
     padding: 6rem;
     color: white;
 
-    div {
-        margin-right: auto;
-    }
-
     button {
         cursor: pointer;
     }
@@ -368,6 +450,7 @@ footer {
             a {
                 text-decoration: none;
                 color: white;
+                font-size: 2rem;
 
                 &:hover {
                     color: #f47321;
@@ -379,6 +462,25 @@ footer {
     img {
         width: 50px;
         height: 50px;
+    }
+
+
+    .top-logo {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50%;
+    }
+
+    .logo {
+        width: 180px;
+        height: 180px;
+        background: url(/Images/logo5.png);
+        background-position: center;
+        background-size: cover;
+        background-color: rgb(210, 205, 205);
+        border-radius: 50%;
     }
 }
 
@@ -399,6 +501,16 @@ footer {
     display: none !important;
 }
 
+.shift-down {
+    transform: translateY(30px);
+
+}
+
+//Global
+h1 {
+    font-size: 4rem;
+}
+
 //Fonts
 @font-face {
     font-family: qirckCheese;
@@ -406,6 +518,15 @@ footer {
 }
 
 @media only screen and (max-width: 1099px) {
+    div.top {
+        padding: 0.5rem;
+
+        button.hamburger {
+            display: flex;
+            z-index: 999;
+        }
+    }
+
     header navbar.navbar {
         display: none;
     }
@@ -491,6 +612,10 @@ footer {
                 flex: 100%;
                 padding: 2rem;
 
+                h3 {
+                    font-size: 1.5rem;
+                }
+
                 img {
                     width: 100%;
                     height: 500px;
@@ -498,11 +623,18 @@ footer {
             }
         }
 
-        .carousel__track {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            padding: 0;
+        div.carousel {
+
+            .carousel__track {
+                position: relative;
+                width: 100%;
+                height: 500px;
+                padding: 0;
+            }
+
+            .carousel__nav {
+                display: none;
+            }
         }
     }
 
@@ -512,5 +644,15 @@ footer {
             background-size: contain;
             height: 400px;
         }
+    }
+
+    footer {
+        h1 {
+            font-size: 1rem;
+        }
+    }
+
+    .shift-down {
+        transform: translateY(0px);
     }
 }
