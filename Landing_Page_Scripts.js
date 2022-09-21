@@ -4,6 +4,20 @@ function MenuDrop() {
     menuDrop.classList.toggle("show");
 }
 
+
+window.onclick = function (event) {
+    if (!event.target.matches('.x')) {
+        var dropdowns = document.getElementsByClassName("drop-down-list");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
 //Scroll events
 window.addEventListener('scroll', (event) => {
     let scrollPos = window.scrollY;
