@@ -57,7 +57,7 @@ header .side-nav {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
+  height: 120vh;
   width: 50vw;
   z-index: 9999;
   -webkit-transition: 1s ease-out;
