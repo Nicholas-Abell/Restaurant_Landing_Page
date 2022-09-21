@@ -41,7 +41,7 @@ header {
 
     h1 {
         font-weight: $bold;
-        -webkit-text-stroke: whitesmoke 0.5px;
+        text-shadow: -2px -2px 0 #000, 2px -2px 2px #000, -2px 2px 0 #000, 2px 2px 0 #000;
         font-family: qirckCheese;
         margin-left: 1rem;
     }
