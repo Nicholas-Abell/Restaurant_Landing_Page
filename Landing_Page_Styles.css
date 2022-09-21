@@ -38,12 +38,79 @@ header .logo {
   background: url(Images/Logo.png);
   background-position: center;
   background-size: cover;
+  background-color: #d2cdcd;
+  border-radius: 50%;
 }
 
 header h1 {
   font-family: qirckCheese;
-  font-size: 4rem;
   margin-left: 1rem;
+}
+
+header .side-nav {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50vw;
+  z-index: 9999;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+header .side-nav button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid red;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 4rem;
+  border: #f47321 solid;
+  color: #f47321;
+  background: none;
+}
+
+header .side-nav button:hover {
+  background-color: gray;
+}
+
+header .side-nav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f47321;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px 20px;
+  border: none;
+  background: none;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+header .side-nav a:hover {
+  opacity: 70%;
+}
+
+header .side-nav .logo {
+  background-image: url(/Images/Logo3.jpg);
+  margin: auto auto;
+  padding: 50%;
 }
 
 div.top {
@@ -55,6 +122,42 @@ div.top {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   background-color: #35302A;
+  padding: 2rem;
+}
+
+div.top button.hamburger {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 40px;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+}
+
+div.top button.hamburger span {
+  width: 50px;
+  height: 4px;
+  background-color: #f47321;
+}
+
+div.top button.hamburger span:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 div.top button.order {
@@ -122,6 +225,7 @@ div.nav-container {
   margin-top: 1rem;
   border-radius: 1rem;
   display: none;
+  overflow: hidden;
 }
 
 .drop-down-container .drop-down-list a {
@@ -324,7 +428,8 @@ main button {
   font-weight: 700;
   color: #f47321;
   border-color: #585555;
-  padding: 25px 50px;
+  width: 30%;
+  padding: 2% 0px;
   margin: 2rem auto;
 }
 
@@ -381,10 +486,6 @@ footer {
   color: white;
 }
 
-footer div {
-  margin-right: auto;
-}
-
 footer button {
   cursor: pointer;
 }
@@ -400,6 +501,7 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: white;
+  font-size: 2rem;
 }
 
 footer ul li a:hover {
@@ -409,6 +511,33 @@ footer ul li a:hover {
 footer img {
   width: 50px;
   height: 50px;
+}
+
+footer .top-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50%;
+}
+
+footer .logo {
+  width: 180px;
+  height: 180px;
+  background: url(/Images/logo5.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #d2cdcd;
+  border-radius: 50%;
 }
 
 /* Helper */
@@ -430,12 +559,30 @@ footer img {
   display: none !important;
 }
 
+.shift-down {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
 @font-face {
   font-family: qirckCheese;
   src: url(/Fonts/Quark-Cheese.png);
 }
 
 @media only screen and (max-width: 1099px) {
+  div.top {
+    padding: 0.5rem;
+  }
+  div.top button.hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 999;
+  }
   header navbar.navbar {
     display: none;
   }
@@ -520,20 +667,33 @@ footer img {
             flex: 100%;
     padding: 2rem;
   }
+  main .card-container .card h3 {
+    font-size: 1.5rem;
+  }
   main .card-container .card img {
     width: 100%;
     height: 500px;
   }
-  main .carousel__track {
+  main div.carousel .carousel__track {
     position: relative;
     width: 100%;
     height: 500px;
     padding: 0;
   }
+  main div.carousel .carousel__nav {
+    display: none;
+  }
   .story .left {
     background-color: #0d0a1b;
     background-size: contain;
     height: 400px;
+  }
+  footer h1 {
+    font-size: 1rem;
+  }
+  .shift-down {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=Landing_Page_Styles.css.map */
