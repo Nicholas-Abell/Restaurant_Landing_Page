@@ -459,6 +459,7 @@ main .card-container .card img {
 }
 
 main button {
+  border-radius: 2rem;
   font-size: 2rem;
   cursor: pointer;
   margin-bottom: 2rem;
