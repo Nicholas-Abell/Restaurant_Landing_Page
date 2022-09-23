@@ -11,52 +11,47 @@
 
 <body>
     <header>
-        <div class="top-logo hidden">
-            <div class="logo" id="logo" alt="x"></div>
-            <h1>Restaurant</h1>
-
-        </div>
-        <div class="top" id="top">
-            <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-        </div>
-        </div>
         <div class="nav-container" id="nav-container">
-            <navbar class="navbar">
+            <div class="top-logo hidden" id="nav-logo">
+                <h1>Restaurant</h1>
+            </div>
+            <navbar>
                 <ul>
-                    <div class="drop-down">
-                        <li><button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
-                        </li>
-                        <div class="drop-down-container">
-                            <div class="drop-down-list" id="menuDrop">
-                                <a href="#">View Full Menu</a>
-                                <a href="#">Beverages</a>
-                                <a href="#">Starters</a>
-                                <a href="#">Steak</a>
-                                <a href="#">Wine & Spirits</a>
+                    <li>
+                        <div class="drop-down">
+                            <button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
+                            <div class="drop-down-container">
+                                <div class="drop-down-list" id="menuDrop">
+                                    <a href="#">View Full Menu</a>
+                                    <a href="#">Beverages</a>
+                                    <a href="#">Starters</a>
+                                    <a href="#">Steak</a>
+                                    <a href="#">Wine & Spirits</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
                     <li><a href="#">Rewards</a></li>
                     <li><a href="#">Locations</a></li>
                     <li><a href="#">Buy Gift Card</a></li>
                     <li><a href="#">Franchise</a></li>
                 </ul>
             </navbar>
-        </div>
-        <div class="side-nav">
-            <button onclick="CloseSideNav()" id="side-nav-close">X</button>
-            <div class="side-nav__link-container">
-                <a href="#">View Full Menu</a>
-                <a href="#">Beverages</a>
-                <a href="#">Starters</a>
-                <a href="#">Steak</a>
-                <a href="#">Wine & Spirits</a>
+            <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="side-nav">
+                <button onclick="CloseSideNav()" id="side-nav-close">X</button>
+                <div class="side-nav__link-container">
+                    <a href="#">View Full Menu</a>
+                    <a href="#">Beverages</a>
+                    <a href="#">Starters</a>
+                    <a href="#">Steak</a>
+                    <a href="#">Wine & Spirits</a>
+                </div>
             </div>
-            <div class="logo"></div>
-        </div>
     </header>
     <main>
         <div class="carousel">
