@@ -11,7 +11,7 @@ $bold: 700;
 
 body {
     display: table;
-    background-color: #35302A;
+    background-color: rgb(53, 48, 42);
     font-size: 1.3rem;
 }
 
@@ -43,14 +43,15 @@ header {
     }
 
     .side-nav {
-        display: none;
+        display: flex;
         flex-direction: column;
         background-color: black;
         position: absolute;
         right: 0;
         top: 0;
-        height: 120vh;
-        width: 50vw;
+        width: 0;
+        height: 300vh;
+        overflow: hidden;
         z-index: 9999;
         transition: 1s ease-out;
 
@@ -58,7 +59,6 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            border: solid red;
             cursor: pointer;
             width: 25px;
             height: 25px;
@@ -75,7 +75,6 @@ header {
         }
 
         .side-nav__link-container {
-
             display: flex;
             flex-direction: column;
             padding: 1rem;
@@ -99,6 +98,9 @@ header {
         }
     }
 }
+
+
+
 
 button.hamburger {
     float: right;
@@ -229,7 +231,6 @@ main {
     color: white;
     text-align: center;
 
-
     div.carousel {
         position: relative;
         background: #eee;
@@ -247,7 +248,6 @@ main {
             z-index: 1;
             background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
         }
-
 
         .carousel__track {
             position: relative;
