@@ -22,29 +22,24 @@ header {
 
     .top-logo {
         display: flex;
-        align-items: flex-end;
-        position: absolute !important;
-        top: 5px;
-        left: 20px;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        margin: 0;
         z-index: 100;
-    }
-
-    .logo {
-        width: 90px;
-        height: 90px;
-        background: url(Images/Logo.png);
-        background-position: center;
-        background-size: cover;
-        background-color: rgb(210, 205, 205);
-        border-radius: 50%;
+        float: left;
+        height: 100%;
+        width: 30%;
     }
 
     h1 {
         font-weight: $bold;
         color: $primary;
         text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        font-family: qirckCheese;
+        font-family: fancyText;
         margin-left: 1rem;
+        font-size: 4vw;
     }
 
     .side-nav {
@@ -105,58 +100,58 @@ header {
     }
 }
 
-
-div.top {
+button.hamburger {
+    float: right;
+    margin: 1rem 2rem;
+    width: 50px;
+    height: 40px;
     display: flex;
-    flex-direction: row-reverse;
-    background-color: #35302A;
-    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 2;
+    display: none;
 
-    button.hamburger {
-        margin: 0;
-        padding: 0;
+    span {
         width: 50px;
-        height: 40px;
-        margin-right: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        display: none;
-        background: none;
-        border: none;
+        height: 4px;
+        background-color: $primary;
 
-        span {
-            width: 50px;
-            height: 4px;
-            background-color: $primary;
-
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
+        &:not(:last-child) {
+            margin-bottom: 10px;
         }
     }
 }
 
-div.top button.order {
-    padding: 20px;
-    margin-right: 60px;
-    opacity: 0;
-}
 
 div.nav-container {
     position: absolute;
-    display: block;
+    min-height: 5rem;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+div.nav-container::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    padding: 1.5rem;
+    background: rgb(88, 85, 85);
     width: 100%;
 }
 
-.navbar {
+navbar {
     display: block;
     margin: 12px 10px;
     z-index: 1000;
     float: right !important;
     position: relative;
+    margin-top: 5rem;
 
     ul {
         display: flex;
@@ -176,13 +171,13 @@ div.nav-container {
     }
 }
 
-.navbar li a:hover,
-.navbar button:hover {
+navbar li a:hover,
+navbar button:hover {
     opacity: 70%;
     color: white;
 }
 
-.navbar li:not(:last-child),
+navbar li:not(:last-child),
 .drop-down {
     border-right: 1px solid white;
 }
@@ -523,7 +518,7 @@ footer {
     display: flex !important;
 }
 
-.bg-white {
+.bg-dark {
     background: rgb(88, 85, 85) !important;
 }
 
@@ -543,26 +538,24 @@ h1 {
 
 //Fonts
 @font-face {
-    font-family: qirckCheese;
-    src: url(/Fonts/Quark-Cheese.png);
+    font-family: fancyText;
+    src: url(/Fonts/SCRIPTIN.ttf);
 }
 
 @media only screen and (max-width: 1099px) {
-    div.top {
-        padding: 0.5rem;
-
-        button.hamburger {
-            display: flex;
-            z-index: 999;
-        }
+    div.nav-container::before {
+        content: none;
     }
 
-    header navbar.navbar {
+
+    button.hamburger {
+        display: flex;
+        z-index: 999;
+    }
+
+
+    header navbar {
         display: none;
-    }
-
-    div.nav-container {
-        padding: 1.5rem;
     }
 
     main {
@@ -602,12 +595,12 @@ h1 {
 
 @media only screen and (max-width: 700px) {
 
-    header navbar.navbar {
+    header navbar {
         display: none;
     }
 
     div.nav-container {
-        padding: 0rem;
+        padding: 0;
     }
 
     header {
