@@ -21,36 +21,28 @@ window.onclick = function (event) {
 //Scroll events
 window.addEventListener('scroll', (event) => {
     let scrollPos = window.scrollY;
-    const navTop = document.getElementById('nav-container');
+    const navContainer = document.getElementById('nav-container');
     const top = document.getElementById('top');
-    const logo = document.querySelector('.top-logo');
+    const navLogo = document.getElementById('nav-logo');
     const hamburger = document.getElementById('hamburger');
 
-    const add_background_on_scroll = (x) => x.classList.add('bg-white');
-    const add_border_on_scroll = (x) => x.classList.add('border-bottom');
-    const remove_background_on_scroll = (x) => x.classList.remove('bg-white');
-    const remove_border_on_scroll = (x) => x.classList.remove('border-bottom');
+    const add_background_on_scroll = (x) => x.classList.add('bg-dark');
+    const remove_background_on_scroll = (x) => x.classList.remove('bg-dark');
+
     const show_on_scroll = (x) => x.classList.remove('hidden');
     const hide_on_scroll = (x) => x.classList.add('hidden');
-    const shift_Down = (x) => x.classList.add('shift-down');
-    const remove_shift = (x) => x.classList.remove('shift-down');
-
-    const addClass = (x, y) => x.classList.add(y);
-    const removeClass = (x, y) => x.classList.add(y);
+    // const shift_Down = (x) => x.classList.add('shift-down');
+    // const remove_shift = (x) => x.classList.remove('shift-down');
 
     if (scrollPos >= 200) {
-        add_background_on_scroll(navTop);
-        add_border_on_scroll(navTop);
-        add_background_on_scroll(top);
-        show_on_scroll(logo);
-        shift_Down(hamburger);
+        add_background_on_scroll(navContainer);
+        show_on_scroll(navLogo);
+        // shift_Down(hamburger);
     }
     else {
-        remove_background_on_scroll(navTop);
-        remove_border_on_scroll(navTop);
-        remove_background_on_scroll(top);
-        hide_on_scroll(logo);
-        remove_shift(hamburger);
+        remove_background_on_scroll(navContainer);
+        hide_on_scroll(navLogo);
+        // remove_shift(hamburger);
     }
 });
 
@@ -76,7 +68,7 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.opacity = '100';
     dots[slideIndex - 1].style.background = "#f47321";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 4000);
 }
 
 //Hamburger_Side-Nav
