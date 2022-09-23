@@ -9,7 +9,7 @@
 
 body {
   display: table;
-  background-color: #35302A;
+  background-color: #35302a;
   font-size: 1.3rem;
 }
 
@@ -47,7 +47,9 @@ header h1 {
 }
 
 header .side-nav {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -56,8 +58,9 @@ header .side-nav {
   position: absolute;
   right: 0;
   top: 0;
-  height: 120vh;
-  width: 50vw;
+  width: 0;
+  height: 300vh;
+  overflow: hidden;
   z-index: 9999;
   -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
@@ -73,7 +76,6 @@ header .side-nav button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid red;
   cursor: pointer;
   width: 25px;
   height: 25px;
@@ -576,6 +578,7 @@ footer .logo {
 
 .bg-dark {
   background: #585555 !important;
+  border-bottom: solid #000 2px;
 }
 
 .hidden {
@@ -664,12 +667,8 @@ h1 {
     top: 10px;
     left: 20px;
   }
-  header .logo {
-    width: 40px;
-    height: 40px;
-  }
-  header h1 {
-    font-size: 2rem;
+  header .top-logo h1 {
+    font-size: 8vw;
     margin-left: 1rem;
   }
   main .card-container {
