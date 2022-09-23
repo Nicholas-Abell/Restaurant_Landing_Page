@@ -448,13 +448,12 @@ main button {
   border-radius: 2rem;
   font-size: 2rem;
   cursor: pointer;
+  padding: 1rem;
   margin-bottom: 2rem;
   background: black;
   font-weight: 700;
   color: #f47321;
   border-color: #585555;
-  width: 30%;
-  padding: 2% 0px;
   margin: 2rem auto;
 }
 
