@@ -2,158 +2,161 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="Landing_Page_Styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="Landing_Page_Styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="nav-container" id="nav-container">
-            <div class="top-logo hidden" id="nav-logo">
-                <h1>Restaurant</h1>
-            </div>
-            <navbar>
-                <ul>
-                    <li>
-                        <div class="drop-down">
-                            <button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
-                            <div class="drop-down-container">
-                                <div class="drop-down-list" id="menuDrop">
-                                    <a href="#">View Full Menu</a>
-                                    <a href="#">Beverages</a>
-                                    <a href="#">Starters</a>
-                                    <a href="#">Steak</a>
-                                    <a href="#">Wine & Spirits</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Buy Gift Card</a></li>
-                    <li><a href="#">Franchise</a></li>
-                </ul>
-            </navbar>
-            <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="side-nav">
-                <button onclick="CloseSideNav()" id="side-nav-close">X</button>
-                <div class="side-nav__link-container">
-                    <a href="#">View Full Menu</a>
-                    <a href="#">Beverages</a>
-                    <a href="#">Starters</a>
-                    <a href="#">Steak</a>
-                    <a href="#">Wine & Spirits</a>
+  <header>
+    <div class="nav-container" id="nav-container">
+      <div class="top-logo hidden" id="nav-logo">
+        <h1>Restaurant</h1>
+      </div>
+      <navbar>
+        <ul>
+          <li>
+            <div class="drop-down">
+              <button class="x" href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
+              <div class="drop-down-container">
+                <div class="drop-down-list" id="menuDrop">
+                  <a href="#">View Full Menu</a>
+                  <a href="#">Beverages</a>
+                  <a href="#">Starters</a>
+                  <a href="#">Steak</a>
+                  <a href="#">Wine & Spirits</a>
                 </div>
+              </div>
             </div>
-    </header>
-    <main>
-        <div class="carousel">
-            <ul class="carousel__track">
-                <li class="carousel__slide">
-                    <div class="carousel__text">
-                        <h1>Welcome to Flavor</h1>
-                        <p></p>
-                    </div>
-                    <img src="Images/Slide-1.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                    <div class="carousel__text">
-                        <h1>Cooked to Perfection</h1>
-                        <p>worth the wait</p>
-                    </div>
-                    <img src="Images/Slide-2.jpg" alt="slide-2">
-                </li>
-                <li class="carousel__slide">
-                    <div class="carousel__text">
-                        <h1>Vegan Options Available</h1>
-                        <p>we cater to your needs</p>
-                    </div>
-                    <img src="Images/Slide-3.jpg" alt="slide-3">
-                </li>
-                <li class="carousel__slide">
-                    <div class="carousel__text">
-                        <h1>Reserve Seats</h1>
-                        <p>...While you can</p>
-                    </div>
-                    <img src="Images/Slide-4.jpg" alt="">
-                </li>
-            </ul>
-            <div class="carousel__nav">
-                <div class="dot current-slide" id="dot-1"></div>
-                <div class="dot" id="dot-2"></div>
-                <div class="dot" id="dot-3"></div>
-                <div class="dot" id="dot-4"></div>
-            </div>
+          </li>
+          <li><a href="#">Rewards</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Buy Gift Card</a></li>
+          <li><a href="#">Franchise</a></li>
+        </ul>
+      </navbar>
+      <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="side-nav">
+        <button class="side-nav__button" onclick="CloseSideNav()" id="side-nav-close">X</button>
+        <div class="side-nav__link-container">
+          <a href="#">View Full Menu</a>
+          <a href="#">Beverages</a>
+          <a href="#">Starters</a>
+          <a href="#">Steak</a>
+          <a href="#">Wine & Spirits</a>
         </div>
-        <div class="menu-container">
-            <h3>Menu</h3>
-            <p>Fresh, never frozen and always delicious. Dive into our full menu.
-                <br>
-                Try not to lick the screen.
-            <p>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="appetizer-img"></div>
-                <h3>Appetizers</h3>
-                <p>It's the kind of food that's built to share. But no one's going to force you.</p>
-            </div>
-            <div class="card">
-                <div class="steak-img"></div>
-                <h3>Steak</h3>
-                <p>We’ve got a flavor for every fan. Create your wings, your way.</p>
-            </div>
-            <div class="card">
-                <div class="wine-img"></div>
-                <h3>Wine & Spirits</h3>
-                <p>Dinner tonight. Leftovers tomorrow.</p>
-            </div>
-            <div class="card">
-                <div class="salad-img"></div>
-                <h3>Salads & Soups</h3>
-                <p>Going green is no sacrifice.</p>
-            </div>
-            <div class="card">
-                <div class="sandwhich-img"></div>
-                <h3>Sandwhiches</h3>
-                <p>Always Fresh. Never Frozen. Sometimes Addictive.</p>
-            </div>
-            <div class="card">
-                <div class="dessert-img"></div>
-                <h3>Dessert</h3>
-                <p>The flavor is there, any way you slice it.</p>
-            </div>
-        </div>
-        <button>View Our Full Menu</button>
-    </main>
-    <section class="story">
-        <div class="left"></div>
-        <div class="right"></div>
-    </section>
+      </div>
+  </header>
+  <main>
+    <div class="carousel">
+      <ul class="carousel__track">
+        <li class="carousel__slide">
+          <div class="carousel__text">
+            <h1 class="carousel__title">Welcome to Flavor</h1>
+            <p class="carousel__caption"></p>
+          </div>
+          <img class="carousel__image" src="Images/Slide-1.jpg" alt="">
+        </li>
+        <li class="carousel__slide">
+          <div class="carousel__text">
+            <h1 class="carousel__title">Cooked to Perfection</h1>
+            <p class="carousel__caption">worth the wait</p>
+          </div>
+          <img class="carousel__image" src="Images/Slide-2.jpg" alt="slide-2">
+        </li>
+        <li class="carousel__slide">
+          <div class="carousel__text">
+            <h1 class="carousel__title">Vegan Options Available</h1>
+            <p class="carousel__caption">we cater to your needs</p>
+          </div>
+          <img class="carousel__image" src="Images/Slide-3.jpg" alt="slide-3">
+        </li>
+        <li class="carousel__slide">
+          <div class="carousel__text">
+            <h1 class="carousel__title">Reserve Seats</h1>
+            <p class="carousel__caption">...While you can</p>
+          </div>
+          <img class="carousel__image" src="Images/Slide-4.jpg" alt="">
+        </li>
+      </ul>
+      <div class="carousel__nav">
+        <div class="carousel__dot" id="dot-1"></div>
+        <div class="carousel__dot" id="dot-2"></div>
+        <div class="carousel__dot" id="dot-3"></div>
+        <div class="carousel__dot" id="dot-4"></div>
+      </div>
+    </div>
+    
+    <div class="menu-header">
+      <h3 class="menu-header__title">Menu</h3>
+      <p class="menu-header__caption">Fresh, never frozen and always delicious. Dive into our full menu.
+        <br>
+        Try not to lick the screen.
+      <p>
+    </div>
+    
+    <div class="card-container">
+      <div class="card">
+        <div class="card__appetizer-img"></div>
+        <h3 class="card__title">Appetizers</h3>
+        <p class="card__info">It's the kind of food that's built to share. But no one's going to force you.</p>
+      </div>
+      <div class="card">
+        <div class="card__steak-img"></div>
+        <h3 class="card__title">Steak</h3>
+        <p class="card__info">We’ve got a flavor for every fan. Create your wings, your way.</p>
+      </div>
+      <div class="card">
+        <div class="card__wine-img"></div>
+        <h3 class="card__title">Wine & Spirits</h3>
+        <p class="card__info">Dinner tonight. Leftovers tomorrow.</p>
+      </div>
+      <div class="card">
+        <div class="card__salad-img"></div>
+        <h3 class="card__title">Salads & Soups</h3>
+        <p class="card__info">Going green is no sacrifice.</p>
+      </div>
+      <div class="card">
+        <div class="card__sandwhich-img"></div>
+        <h3 class="card__title">Sandwhiches</h3>
+        <p class="card__info">Always Fresh. Never Frozen. Sometimes Addictive.</p>
+      </div>
+      <div class="card">
+        <div class="card__dessert-img"></div>
+        <h3 class="card__title">Dessert</h3>
+        <p class="card__info">The flavor is there, any way you slice it.</p>
+      </div>
+    </div>
+    <button>View Our Full Menu</button>
+  </main>
+    
+  <section class="story">
+    <div class="left"></div>
+    <div class="right"></div>
+  </section>
 
-    <footer>
-        <div class="contact-info">
-            <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Gift Cards</a></li>
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">News</a></li>
-            </ul>
-        </div>
-        <div class="top-logo">
-            <div class="logo" id="logo" alt="x"></div>
-            <h1>Restaurant</h1>
-        </div>
-    </footer>
+  <footer>
+    <div class="contact-info">
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </div>
+    <div class="top-logo">
+      <div class="logo" id="logo" alt="x"></div>
+      <h1>Restaurant</h1>
+    </div>
+  </footer>
 
-    <script src="Landing_Page_Scripts.js"></script>
+  <script src="Landing_Page_Scripts.js"></script>
 </body>
 
 </html>
