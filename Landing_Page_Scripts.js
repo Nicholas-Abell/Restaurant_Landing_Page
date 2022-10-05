@@ -7,7 +7,7 @@ function MenuDrop() {
 
 window.onclick = function (event) {
     if (!event.target.matches('.x')) {
-        var dropdowns = document.getElementsByClassName("drop-down-list");
+        var dropdowns = document.getElementsByClassName("drop-down__list");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
