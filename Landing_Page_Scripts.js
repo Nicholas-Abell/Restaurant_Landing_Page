@@ -1,13 +1,15 @@
 //Navbar Dropdown
 function MenuDrop() {
-    var menuDrop = document.getElementById("menuDrop");
-    menuDrop.classList.toggle("show");
+    var dropDown = document.getElementById("menuDrop");
+    dropDown.classList.add('show');
 }
 
 
 window.onclick = function (event) {
-    if (!event.target.matches('.x')) {
-        var dropdowns = document.getElementsByClassName("drop-down__list");
+    var dropdowns = document.getElementsByClassName("drop-down__list");
+
+    if (event.target.classList != 'drop-down__list__item' &&
+        event.target.classList != 'navbar__list__item--button') {
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
