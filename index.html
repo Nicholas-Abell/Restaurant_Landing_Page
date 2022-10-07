@@ -13,26 +13,27 @@
     <header>
         <div class="sticky-header" id="nav-container">
             <h1 class="sticky-header__logo hidden" id="nav-logo">Restaurant</h1>
-            <nav>
-                <ul>
+            <nav class="navbar">
+                <ul class="navbar__list">
                     <li>
                         <div>
-                            <button href="#" onclick="MenuDrop()">Menu<span class="caret"></span></button>
+                            <button class="navbar__list__item--button" href="#" onclick="MenuDrop()">Menu<span
+                                    class="caret"></span></button>
                             <div class="drop-down">
                                 <div class="drop-down__list" id="menuDrop">
-                                    <a href="#">View Full Menu</a>
-                                    <a href="#">Beverages</a>
-                                    <a href="#">Starters</a>
-                                    <a href="#">Steak</a>
-                                    <a href="#">Wine & Spirits</a>
+                                    <a class="drop-down__list__item" href="#">View Full Menu</a>
+                                    <a class="drop-down__list__item" href="#">Beverages</a>
+                                    <a class="drop-down__list__item" href="#">Starters</a>
+                                    <a class="drop-down__list__item" href="#">Steak</a>
+                                    <a class="drop-down__list__item" href="#">Wine & Spirits</a>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Buy Gift Card</a></li>
-                    <li><a href="#">Franchise</a></li>
+                    <li class="navbar__list__item"><a class="navbar__list__item--inner" href=" #">Rewards</a></li>
+                    <li class="navbar__list__item"><a class="navbar__list__item--inner" href=" #">Locations</a></li>
+                    <li class="navbar__list__item"><a class="navbar__list__item--inner" href=" #">Buy Gift Card</a></li>
+                    <li class="navbar__list__item"><a class="navbar__list__item--inner" href=" #">Franchise</a></li>
                 </ul>
             </nav>
             <button onclick="OpenSideNav()" class="hamburger" id="hamburger">
@@ -43,11 +44,11 @@
             <div class="side-nav">
                 <button class="side-nav__button" onclick="CloseSideNav()" id="side-nav-close">X</button>
                 <div class="side-nav__link-container">
-                    <a href="#">View Full Menu</a>
-                    <a href="#">Beverages</a>
-                    <a href="#">Starters</a>
-                    <a href="#">Steak</a>
-                    <a href="#">Wine & Spirits</a>
+                    <a class="side-nav__link-container__item" href="#">View Full Menu</a>
+                    <a class="side-nav__link-container__item" href="#">Beverages</a>
+                    <a class="side-nav__link-container__item" href="#">Starters</a>
+                    <a class="side-nav__link-container__item" href="#">Steak</a>
+                    <a class="side-nav__link-container__item" href="#">Wine & Spirits</a>
                 </div>
             </div>
         </div>
@@ -102,32 +103,32 @@
 
         <div class="card-container">
             <div class="card">
-                <div class="card__appetizer-img"></div>
+                <img src="Images/Appetizer.jpg" alt="">
                 <h3 class="card__title">Appetizers</h3>
                 <p class="card__info">It's the kind of food that's built to share. But no one's going to force you.</p>
             </div>
             <div class="card">
-                <div class="card__steak-img"></div>
+                <img src="Images/Steak.jpg" alt="">
                 <h3 class="card__title">Steak</h3>
                 <p class="card__info">We’ve got a flavor for every fan. Create your wings, your way.</p>
             </div>
             <div class="card">
-                <div class="card__wine-img"></div>
+                <img src="Images/Wine-and-Spirits.jpg" alt="">
                 <h3 class="card__title">Wine & Spirits</h3>
                 <p class="card__info">Dinner tonight. Leftovers tomorrow.</p>
             </div>
             <div class="card">
-                <div class="card__salad-img"></div>
+                <img src="Images/Salad.jpg" alt="">
                 <h3 class="card__title">Salads & Soups</h3>
                 <p class="card__info">Going green is no sacrifice.</p>
             </div>
             <div class="card">
-                <div class="card__sandwhich-img"></div>
+                <img src="Images/Burgers.jpg" alt="">
                 <h3 class="card__title">Sandwhiches</h3>
                 <p class="card__info">Always Fresh. Never Frozen. Sometimes Addictive.</p>
             </div>
             <div class="card">
-                <div class="card__dessert-img"></div>
+                <img src="Images/Dessert.jpg" alt="">
                 <h3 class="card__title">Dessert</h3>
                 <p class="card__info">The flavor is there, any way you slice it.</p>
             </div>
@@ -142,16 +143,18 @@
 
     <footer>
         <div class="contact-info">
-            <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Gift Cards</a></li>
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">News</a></li>
+            <ul class="contact-info__list">
+                <li class="contact-info__list__item"><a class="contact-info__list__item--inner" href="#">Contact Us</a>
+                </li>
+                <li class="contact-info__list__item"><a class="contact-info__list__item--inner" href="#">Gift Cards</a>
+                </li>
+                <li class="contact-info__list__item"><a class="contact-info__list__item--inner" href="#">Legal</a></li>
+                <li class="contact-info__list__item"><a class="contact-info__list__item--inner" href="#">News</a></li>
             </ul>
         </div>
-        <div class="top-logo">
-            <div class="logo" id="logo" alt="x"></div>
-            <h1>Restaurant</h1>
+        <div class="footer-flair top-logo">
+            <div class="footer-flair__logo logo" id="logo" alt="x"></div>
+            <h1 class="footer-flair__title">Restaurant</h1>
         </div>
     </footer>
 
