@@ -72,12 +72,12 @@ header {
             }
         }
 
-        .side-nav__link-container {
+        &__link-container {
             display: flex;
             flex-direction: column;
             padding: 1rem;
 
-            a {
+            &__item {
                 cursor: pointer;
                 text-decoration: none;
                 color: $primary;
@@ -130,18 +130,18 @@ div.sticky-header {
     z-index: 2;
     top: 0;
     left: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        padding: 1.5rem;
+        background: rgb(88, 85, 85);
+        width: 100%;
+    }
 }
 
-div.sticky-header::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    padding: 1.5rem;
-    background: rgb(88, 85, 85);
-    width: 100%;
-}
-
-nav {
+.navbar {
     display: block;
     margin: 12px 10px;
     z-index: 1000;
@@ -149,12 +149,12 @@ nav {
     position: relative;
     margin-top: 5rem;
 
-    ul {
+    &__list {
         display: flex;
         list-style-type: none;
 
-        li a,
-        li button {
+        &__item--inner,
+        &__item--button {
             cursor: pointer;
             text-decoration: none;
             color: $primary;
@@ -164,18 +164,20 @@ nav {
             border: none;
             background: none;
         }
+
+        &__item--button,
+        &__item:not(:last-child) {
+            border-right: 1px solid white;
+        }
+
+        //opacity needs corrected
+        &:hover {
+            opacity: 70%;
+            color: white;
+        }
     }
 }
 
-nav li a:hover,
-nav button:hover {
-    opacity: 70%;
-    color: white;
-}
-
-nav li:not(:last-child) {
-    border-right: 1px solid white;
-}
 
 .drop-down {
     position: absolute;
@@ -190,7 +192,7 @@ nav li:not(:last-child) {
         display: none;
         overflow: hidden;
 
-        a {
+        &__item {
             padding: 1.25rem;
             text-decoration: none;
             color: $primary;
@@ -324,7 +326,7 @@ main {
     }
 
     &__caption {
-        color: red;
+        color: whitesmoke;
     }
 }
 
@@ -340,55 +342,10 @@ main {
 
         img {
             width: 100%;
+            max-height: auto;
             height: 500px;
-        }
-
-        &__appetizer-img {
-            background-image: url(Images/Appetizer.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-        }
-
-        &__steak-img {
-            background-image: url(Images/Steak.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-        }
-
-        &__wine-img {
-            background-image: url(Images/Wine-and-Spirits.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-        }
-
-        &__salad-img {
-            background-image: url(Images/Salad.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-        }
-
-        &__sandwhich-img {
-            background-image: url(Images/Burgers.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-        }
-
-        &__dessert-img {
-            background-image: url(Images/Dessert.jpg);
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
+            object-position: center;
+            overflow: hidden;
         }
 
         &__title {
@@ -448,51 +405,66 @@ main button {
 footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: #35302a;
     padding: 6rem;
     color: white;
 
-    ul {
-        list-style-type: none;
+    .contact-info {
 
-        li {
-            margin-bottom: 1rem;
+        &__list {
 
-            a {
-                text-decoration: none;
-                color: white;
-                font-size: 2rem;
+            list-style-type: none;
 
-                &:hover {
-                    color: #f47321;
+            &__item {
+
+                margin-bottom: 1rem;
+
+                &--inner {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 2rem;
+
+                    &:hover {
+                        color: #f47321;
+                    }
+
                 }
             }
         }
     }
+
 
     img {
         width: 50px;
         height: 50px;
     }
 
-    .top-logo {
+    .footer-flair {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-left: 50%;
+
+        &__logo {
+            width: 180px;
+            height: 180px;
+            background: url(Images/logo5.png);
+            background-position: center;
+            background-size: cover;
+            background-color: rgb(210, 205, 205);
+            border-radius: 50%;
+        }
+
+        &__title {
+            color: #eb6d1e;
+            font-family: fancyText;
+            text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000,
+                1px 1px 0 #000;
+        }
+
     }
 
-    .logo {
-        width: 180px;
-        height: 180px;
-        background: url(Images/logo5.png);
-        background-position: center;
-        background-size: cover;
-        background-color: rgb(210, 205, 205);
-        border-radius: 50%;
-    }
 }
 
 /* Helper */
