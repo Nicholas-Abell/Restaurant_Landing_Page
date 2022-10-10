@@ -69,7 +69,6 @@ function showSlides() {
 
 //Hamburger_Side-Nav
 const sideNav = document.querySelector('.side-nav');
-const backDrop = document.querySelector(".back-drop")
 
 function CloseSideNav() {
     sideNav.style.width = "0";
@@ -77,6 +76,6 @@ function CloseSideNav() {
 }
 
 function OpenSideNav() {
-    sideNav.style.width = "50vw";
+    sideNav.style.width = "50%";
     document.body.style = "overflow: hidden";
 }
