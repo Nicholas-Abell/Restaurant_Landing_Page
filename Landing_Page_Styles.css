@@ -20,7 +20,25 @@ header {
   left: 0;
 }
 
-header .top-logo {
+header .sticky-header {
+  position: absolute;
+  min-height: 5rem;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+header .sticky-header::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  padding: 1.5rem;
+  background: #585555;
+  width: 100%;
+}
+
+header .sticky-header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,15 +53,48 @@ header .top-logo {
   float: left;
   height: 100%;
   width: 30%;
-}
-
-header h1 {
   font-weight: 700;
   color: #f47321;
-  text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000,
+ 1px 1px 0 #000;
   font-family: fancyText;
   margin-left: 1rem;
   font-size: 4vw;
+}
+
+header .navbar {
+  display: block;
+  margin: 12px 10px;
+  z-index: 1000;
+  float: right !important;
+  position: relative;
+  margin-top: 5rem;
+}
+
+header .navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+header .navbar__list__item--inner, header .navbar__list__item--button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f47321;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px 20px;
+  border: none;
+  background: none;
+}
+
+header .navbar__list__item--inner:hover, header .navbar__list__item--button:hover {
+  color: white;
+}
+
+header .navbar__list__item--button:not(:last-child), header .navbar__list__item:not(:last-child) {
+  border-right: 1px solid white;
 }
 
 header .side-nav {
@@ -66,7 +117,7 @@ header .side-nav {
   transition: 1s ease-out;
 }
 
-header .side-nav button {
+header .side-nav__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,11 +138,11 @@ header .side-nav button {
   background: none;
 }
 
-header .side-nav button:hover {
+header .side-nav__button:hover {
   background-color: gray;
 }
 
-header .side-nav .side-nav__link-container {
+header .side-nav__link-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +153,7 @@ header .side-nav .side-nav__link-container {
   padding: 1rem;
 }
 
-header .side-nav .side-nav__link-container a {
+header .side-nav__link-container__item {
   cursor: pointer;
   text-decoration: none;
   color: #f47321;
@@ -115,7 +166,7 @@ header .side-nav .side-nav__link-container a {
   margin-top: 2rem;
 }
 
-header .side-nav .side-nav__link-container a:hover {
+header .side-nav__link-container__item:hover {
   opacity: 70%;
 }
 
@@ -154,68 +205,11 @@ button.hamburger span:not(:last-child) {
   margin-bottom: 10px;
 }
 
-div.nav-container {
-  position: absolute;
-  min-height: 5rem;
-  width: 100%;
-  z-index: 2;
-  top: 0;
-  left: 0;
-}
-
-div.nav-container::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  padding: 1.5rem;
-  background: #585555;
-  width: 100%;
-}
-
-navbar {
-  display: block;
-  margin: 12px 10px;
-  z-index: 1000;
-  float: right !important;
-  position: relative;
-  margin-top: 5rem;
-}
-
-navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-
-navbar ul li a,
-navbar ul li button {
-  cursor: pointer;
-  text-decoration: none;
-  color: #f47321;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 0px 20px;
-  border: none;
-  background: none;
-}
-
-navbar li a:hover,
-navbar button:hover {
-  opacity: 70%;
-  color: white;
-}
-
-navbar li:not(:last-child),
 .drop-down {
-  border-right: 1px solid white;
-}
-
-.drop-down-container {
   position: absolute;
 }
 
-.drop-down-container .drop-down-list {
+.drop-down__list {
   position: relative;
   right: 25%;
   -webkit-box-orient: vertical;
@@ -229,7 +223,7 @@ navbar li:not(:last-child),
   overflow: hidden;
 }
 
-.drop-down-container .drop-down-list a {
+.drop-down__list__item {
   padding: 1.25rem;
   text-decoration: none;
   color: #f47321;
@@ -237,11 +231,11 @@ navbar li:not(:last-child),
   font-size: 20px;
 }
 
-.drop-down-container .drop-down-list a:not(:last-child) {
+.drop-down__list__item:not(:last-child) {
   border-bottom: 1px solid black;
 }
 
-.drop-down-container .drop-down-list a:hover {
+.drop-down__list__item:hover {
   background: gray;
 }
 
@@ -262,7 +256,7 @@ main {
   text-align: center;
 }
 
-main div.carousel {
+main .carousel {
   position: relative;
   background: #eee;
   width: 100%;
@@ -270,7 +264,7 @@ main div.carousel {
   z-index: -1;
 }
 
-main div.carousel::before {
+main .carousel::before {
   content: "";
   display: block;
   position: absolute;
@@ -281,14 +275,14 @@ main div.carousel::before {
   background: url(https://bwr-production.s3.amazonaws.com/assets/slider-gradient-5e963f45eef6f353096413ea259890a07e9119619f643fc073418759199c78c4.png) repeat-x;
 }
 
-main div.carousel .carousel__track {
+main .carousel__track {
   position: relative;
   width: 100%;
   height: 80vh;
   padding: 0;
 }
 
-main div.carousel .carousel__track .carousel__slide {
+main .carousel__slide {
   width: 100%;
   height: 100%;
   background-color: black;
@@ -300,7 +294,7 @@ main div.carousel .carousel__track .carousel__slide {
   transition: ease-in 1s;
 }
 
-main div.carousel .carousel__track .carousel__slide .carousel__text {
+main .carousel__text {
   position: absolute;
   top: 40%;
   left: 0;
@@ -309,16 +303,16 @@ main div.carousel .carousel__track .carousel__slide .carousel__text {
   font-weight: 700;
 }
 
-main div.carousel .carousel__track .carousel__slide .carousel__text h1 {
-  text-shadow: -2px -2px 0 #000, 2px -2px 2px #000, -2px 2px 0 #000, 2px 2px 0 #000;
+main .carousel__title {
   margin-bottom: 1rem;
 }
 
-main div.carousel .carousel__track .carousel__slide .carousel__text p {
-  text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000, 1px 1px 0 #000;
+main .carousel__caption, main .carousel__title {
+  text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000,
+ 1px 1px 0 #000;
 }
 
-main div.carousel .carousel__track .carousel__slide img {
+main .carousel__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -327,7 +321,7 @@ main div.carousel .carousel__track .carousel__slide img {
      object-position: center;
 }
 
-main div.carousel .carousel__nav {
+main .carousel__nav {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,7 +330,7 @@ main div.carousel .carousel__nav {
   left: 50%;
 }
 
-main div.carousel .carousel__nav .dot {
+main .carousel__dot {
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -346,31 +340,32 @@ main div.carousel .carousel__nav .dot {
   border: black solid 2px;
 }
 
-main div.carousel .carousel__nav .dot:not(:last-child) {
+main .carousel__dot:not(:last-child) {
   margin-right: 10px;
 }
 
-main div.carousel .carousel__nav .dot:hover {
+main .carousel__dot:hover {
   cursor: pointer;
   background-color: red;
 }
 
-main h3 {
+.menu-header {
+  background-color: #35302a;
+}
+
+.menu-header__title {
   font-size: 2rem;
-}
-
-main .menu-container {
-  background-color: #35302A;
-}
-
-main .menu-container h3 {
   color: #f47321;
   font-weight: 700;
   margin: 2rem 0;
 }
 
-main .card-container {
-  background-color: #35302A;
+.menu-header__caption {
+  color: whitesmoke;
+}
+
+.menu-container {
+  background-color: #35302a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,67 +374,24 @@ main .card-container {
   text-align: left;
 }
 
-main .card-container .card {
+.menu-container .card {
   -webkit-box-flex: 33.33%;
       -ms-flex: 33.33%;
           flex: 33.33%;
+  min-width: 400px;
   padding: 2rem;
 }
 
-main .card-container .card img {
+.menu-container .card__image {
   width: 100%;
+  max-height: auto;
   height: 500px;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
 }
 
-.appetizer-img {
-  background-image: url(Images/Appetizer.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.steak-img {
-  background-image: url(Images/Steak.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.wine-img {
-  background-image: url(Images/Wine-and-Spirits.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.salad-img {
-  background-image: url(Images/Salad.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.sandwhich-img {
-  background-image: url(Images/Burgers.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.dessert-img {
-  background-image: url(Images/Dessert.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 500px;
-}
-
-.card h3 {
+.menu-container .card__title {
   color: #eb6d1e;
   margin: 10px 0px;
 }
@@ -458,7 +410,7 @@ main button {
 }
 
 main button:hover {
-  background-color: #35302A;
+  background-color: #35302a;
 }
 
 .story {
@@ -469,17 +421,11 @@ main button:hover {
   min-height: 800px;
 }
 
-.story img {
-  max-width: 100%;
-  margin-top: 100px;
-}
-
-.story .left,
-.story .right {
+.story__logo, .story__img {
   width: 100%;
 }
 
-.story .left {
+.story__logo {
   color: white;
   background-color: gray;
   background-image: url(Images/Logo3.jpg);
@@ -488,7 +434,7 @@ main button:hover {
   background-position: center;
 }
 
-.story .right {
+.story__img {
   background-image: url(Images/Interior.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -502,33 +448,29 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #35302A;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #35302a;
   padding: 6rem;
   color: white;
 }
 
-footer button {
-  cursor: pointer;
-}
-
-footer ul {
+footer .contact-info__list {
   list-style-type: none;
 }
 
-footer ul li {
+footer .contact-info__list__item {
   margin-bottom: 1rem;
 }
 
-footer ul li a {
+footer .contact-info__list__item--inner {
   text-decoration: none;
   color: white;
   font-size: 2rem;
 }
 
-footer ul li a:hover {
+footer .contact-info__list__item--inner:hover {
   color: #f47321;
 }
 
@@ -537,7 +479,7 @@ footer img {
   height: 50px;
 }
 
-footer .top-logo {
+footer .footer-flair {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,10 +493,9 @@ footer .top-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 50%;
 }
 
-footer .logo {
+footer .footer-flair__logo {
   width: 180px;
   height: 180px;
   background: url(Images/logo5.png);
@@ -564,9 +505,16 @@ footer .logo {
   border-radius: 50%;
 }
 
+footer .footer-flair__title {
+  color: #eb6d1e;
+  font-family: fancyText;
+  text-shadow: -1px -1px 0 #000, 1px -1px 1px #000, -1px 1px 0 #000,
+ 1px 1px 0 #000;
+}
+
 /* Helper */
 .border-bottom {
-  border-bottom: #35302A solid 2px;
+  border-bottom: #35302a solid 2px;
 }
 
 .show {
@@ -599,20 +547,14 @@ h1 {
 }
 
 @media only screen and (max-width: 1099px) {
-  div.nav-container::before {
-    content: none;
+  .sticky-header::before {
+    content: none !important;
   }
-  button.hamburger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 999;
-  }
-  header navbar {
+  .navbar {
     display: none;
   }
-  main .card-container {
-    background-color: #35302A;
+  main .menu-container {
+    background-color: #35302a;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -620,15 +562,11 @@ h1 {
         flex-wrap: wrap;
     text-align: left;
   }
-  main .card-container .card {
+  main .menu-container .card {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;
     padding: 2rem;
-  }
-  main .card-container .card img {
-    width: 100%;
-    height: 500px;
   }
   .story {
     display: -webkit-box;
@@ -639,39 +577,34 @@ h1 {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .story img {
+  .story .story__img {
     width: 100%;
   }
-  .story .left,
-  .story .right {
+  .story .story__logo,
+  .story .story__img {
     width: 100%;
     height: 1200px;
   }
 }
 
-@media only screen and (max-width: 700px) {
-  header navbar {
-    display: none;
-  }
-  div.nav-container {
-    padding: 0;
-  }
+@media only screen and (max-width: 870px) {
   header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
   }
-  header .top-logo {
-    top: 10px;
-    left: 20px;
+  header .navbar {
+    display: none;
   }
-  header .top-logo h1 {
-    font-size: 8vw;
-    margin-left: 1rem;
+  header button.hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 999;
   }
-  main .card-container {
-    background-color: #35302A;
+  main .menu-container {
+    background-color: #35302a;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -679,34 +612,30 @@ h1 {
         flex-wrap: wrap;
     text-align: left;
   }
-  main .card-container .card {
+  main .menu-container .card {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
     padding: 2rem;
   }
-  main .card-container .card h3 {
+  main .menu-container .card__title {
     font-size: 1.5rem;
   }
-  main .card-container .card img {
-    width: 100%;
-    height: 500px;
-  }
-  main div.carousel .carousel__track {
+  main div.carousel__track {
     position: relative;
     width: 100%;
     height: 500px;
     padding: 0;
   }
-  main div.carousel .carousel__nav {
+  main div.carousel__nav {
     display: none;
   }
-  .story .left {
+  .story__logo {
     background-color: #0d0a1b;
     background-size: contain;
     height: 400px;
   }
-  footer h1 {
+  .footer-flair__title {
     font-size: 1rem;
   }
   .shift-down {
